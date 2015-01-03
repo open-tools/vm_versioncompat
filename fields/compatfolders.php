@@ -20,10 +20,10 @@ class JFormFieldCompatFolders extends JFormFieldGroupedList
 
 	protected function getGroups()
 	{
-		$groups = array();
+		$groups = array(JHtml::_('select.option', '', '---'));
 		foreach ($this->element->children() as $dir) {
 			if ($dir->getName() != 'folder') continue;
-			
+
 			$directory = (string)$dir;
 			if ($groupLabel = (string) $dir['label']) {
 				$label = JText::_($groupLabel);
@@ -31,18 +31,18 @@ class JFormFieldCompatFolders extends JFormFieldGroupedList
 				$label = $directory;
 			}
 			if (!JFolder::exists($directory))
-                $directory = JPATH_ROOT . '/' . $directory;
+                $directory = JPATH_ROOT . DS . $directory;
 			if (!JFolder::exists($directory)) continue;
 
 			// Initialize the group if necessary.
-			if (!isset($groups[$label])) 
+			if (!isset($groups[$label]))
 				$groups[$label] = array();
-			
+
 			// List all subfolders of the given directory:
 			$folders = JFolder::folders($directory, (string)$dir['filter']);
-			
+
 			foreach ($folders as $option) {
-				$groups[$label][] = JHtml::_('select.option', (string)$dir.'/'.$option, $option);
+				$groups[$label][] = JHtml::_('select.option', (string)$dir.DS.$option, $option);
 			}
 		}
 		reset($groups);

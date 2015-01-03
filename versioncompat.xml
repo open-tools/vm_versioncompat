@@ -6,7 +6,7 @@
     <authorUrl>http://www.open-tools.net/</authorUrl>
     <creationDate>2014-12-16</creationDate>
     <copyright>2010 Daycounts.com, 2014 OpenTools.net</copyright>
-    <version>2.0.0</version>
+    <version>0.2</version>
     <description>Version compatibility custom field</description>
     <files>
         <filename plugin="versioncompat">versioncompat.php</filename>
@@ -25,26 +25,23 @@
     <!-- VM 3.x support (fields rather than params): -->
     <vmconfig>
         <fields name="params" addfieldpath="/administrator/components/com_virtuemart/fields">
-            <fieldset name="customfield" label="VMCUSTOM_VERSIONCOMPAT_CONFIG" addfieldpath="/plugins/vmcustom/versioncompat/fields">
-                <field name="directory" size="500" type="compatfolders" scope="com_virtuemart" label="VMCUSTOM_VERSIONCOMPAT_FOLDER">
-                    <folder label="VMCUSTOM_VERSIONCOMPAT_FOLDER_PLUGIN">/plugins/vmcustom/versioncompat/versioncompat/images/</folder>
-                    <folder label="VMCUSTOM_VERSIONCOMPAT_FOLDER_JOOMLA">/media/plg_vmcustom_versioncompat/</folder>
-                    <folder label="VMCUSTOM_VERSIONCOMPAT_FOLDER_IMAGES">/images/versioncompat/</folder>
+            <fieldset name="versioncompat" addfieldpath="/plugins/vmcustom/versioncompat/fields">
+                <field name="directory" type="compatfolders" scope="com_virtuemart" label="VMCUSTOM_VERSIONCOMPAT_FOLDER">
+                    <folder label="VMCUSTOM_VERSIONCOMPAT_FOLDER_PLUGIN">plugins/vmcustom/versioncompat/versioncompat/images/</folder>
+                    <folder label="VMCUSTOM_VERSIONCOMPAT_FOLDER_JOOMLA">media/plg_vmcustom_versioncompat/</folder>
+                    <folder label="VMCUSTOM_VERSIONCOMPAT_FOLDER_IMAGES">images/versioncompat/</folder>
                 </field>
-                <field name="searchable" type="radio" scope="com_virtuemart" default="1" class="btn-group btn-group-yesno" label="VMCUSTOM_VERSIONCOMPAT_SEARCHABLE">
-                    <option value="1">JYES</option>
-                    <option value="0">JNO</option>
-                </field>
-
+                <field name="textversions" type="text" size="70" label="VMCUSTOM_VERSIONCOMPAT_TEXTVERSIONS" />
             </fieldset>
         </fields>
     </vmconfig>
 
-    <params addpath="/administrator/components/com_virtuemart/elements">
-        <param type="vmjpluginwarning" />
-        <param name="searchable" type="radio" default="1" label="searchable">
-            <option value="1">Yes</option>
-            <option value="0">No</option>
+    <params name="params" addpath="/plugins/vmcustom/versioncompat/elements">
+        <param name="directory" type="compatfolders" scope="com_virtuemart" label="VMCUSTOM_VERSIONCOMPAT_FOLDER">
+            <folder label="VMCUSTOM_VERSIONCOMPAT_FOLDER_PLUGIN">plugins/vmcustom/versioncompat/versioncompat/images/</folder>
+            <folder label="VMCUSTOM_VERSIONCOMPAT_FOLDER_JOOMLA">media/plg_vmcustom_versioncompat/</folder>
+            <folder label="VMCUSTOM_VERSIONCOMPAT_FOLDER_IMAGES">images/versioncompat/</folder>
         </param>
+        <param name="textversions" type="text" size="70" label="VMCUSTOM_VERSIONCOMPAT_TEXTVERSIONS" />
     </params>
 </extension>
