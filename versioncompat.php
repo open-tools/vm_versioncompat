@@ -24,7 +24,7 @@ class plgVmCustomVersionCompat extends vmCustomPlugin {
         $this->varsToPush = array(
             'compatibility'=>array(array(), 'array'),
             'versions'=>array(array(), 'array'),
-            'searchable'=>array(0,'int'),
+//             'searchable'=>array(0,'int'),
             'directory'=>array('', 'string'),
             'textversions'=>array('', 'string'),
         );

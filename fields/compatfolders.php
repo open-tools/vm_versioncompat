@@ -42,7 +42,8 @@ class JFormFieldCompatFolders extends JFormFieldGroupedList
 			$folders = JFolder::folders($directory, (string)$dir['filter']);
 
 			foreach ($folders as $option) {
-				$groups[$label][] = JHtml::_('select.option', (string)$dir.DS.$option, $option);
+				// TODO: Make sure the $dir ends with a slash! (currently it appears to be always the case, but who knows)
+				$groups[$label][] = JHtml::_('select.option', (string)$dir . $option, $option);
 			}
 		}
 		reset($groups);
