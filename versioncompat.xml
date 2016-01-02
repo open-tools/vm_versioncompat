@@ -44,4 +44,9 @@
         </param>
         <param name="textversions" type="text" size="70" label="VMCUSTOM_VERSIONCOMPAT_TEXTVERSIONS" />
     </params>
+	
+	<updateservers>
+		<server type="extension" name="VM Version Compatibility Custom Field Updates"><![CDATA[http://open-tools.net/UpdateServer/index.php?package=Joomla&amp;extension=VersionCompat&amp;file=extension.xml]]></server>
+	</updateservers>
+
 </extension>
