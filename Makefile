@@ -1,6 +1,6 @@
 BASE=versioncompat
 PLUGINTYPE=vmcustom
-VERSION=0.2
+VERSION=0.3
 
 PLUGINFILES=$(BASE).php $(BASE).script.php $(BASE).xml index.html $(BASE)/
 

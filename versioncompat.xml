@@ -6,7 +6,7 @@
     <authorUrl>http://www.open-tools.net/</authorUrl>
     <creationDate>2014-12-16</creationDate>
     <copyright>2010 Daycounts.com, 2014 OpenTools.net</copyright>
-    <version>0.2</version>
+    <version>0.3</version>
     <description>Version compatibility custom field</description>
     <files>
         <filename plugin="versioncompat">versioncompat.php</filename>

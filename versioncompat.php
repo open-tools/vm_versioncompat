@@ -43,7 +43,8 @@ class plgVmCustomVersionCompat extends vmCustomPlugin {
 
         if (!JFolder::exists($path))
             $path = JPATH_ROOT . DS . $path;
-        if (!JFolder::exists($path)) continue;
+        if (!JFolder::exists($path)) 
+            return;
         $images = JFolder::files($path, '.png');
         return $images;
     }
